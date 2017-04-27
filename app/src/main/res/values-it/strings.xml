@@ -1,0 +1,4 @@
+<resources>
+    <string name="receiver_name">Autorizzazione richiesta</string>
+    <string name="receiver_expl">Consentire a "Lock" di spegnere lo schermo?</string>
+</resources>

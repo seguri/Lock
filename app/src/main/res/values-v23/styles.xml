@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- https://commonsware.com/blog/2015/11/02/psa-android-6p0-theme.nodisplay-regression.html -->
+    <style name="AppTheme" parent="android:Theme.Translucent.NoTitleBar">
+    </style>
+</resources>

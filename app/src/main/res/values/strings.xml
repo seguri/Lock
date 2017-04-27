@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Lock</string>
+    <string name="receiver_name">Authorization required</string>
+    <string name="receiver_expl">Allow "Lock" to turn the screen off?</string>
+</resources>
