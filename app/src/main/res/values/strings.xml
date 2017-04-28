@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Lock</string>
+    <string name="app_name" translatable="false">Lock</string>
     <string name="receiver_name">Lock - screen locker</string>
     <!-- Message displayed to the user by system during authorization-->
     <string name="receiver_expl">Allow "Lock" to turn the screen off?</string>
