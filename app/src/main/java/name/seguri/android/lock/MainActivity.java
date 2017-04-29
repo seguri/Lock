@@ -6,7 +6,6 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -34,7 +33,7 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        Log.i(TAG, "onActivityResult: requestCode=" + requestCode + " resultCode=" + resultCode + " resultCodeString=" + getResultString(resultCode));
+        i("onActivityResult: requestCode=%d resultCode=%d resultCodeString=", requestCode, resultCode, getResultString(resultCode));
         if (requestCode == REQUEST_CODE_ENABLE_ADMIN && resultCode == RESULT_OK) {
             lock();
         }
@@ -46,7 +45,7 @@ public class MainActivity extends Activity {
     }
 
     private void lock() {
-        Log.i(TAG, "lockNow");
+        i("lockNow");
         mDPM.lockNow();
     }
 
@@ -54,7 +53,7 @@ public class MainActivity extends Activity {
         Intent intent = new Intent(DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN);
         intent.putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN, mCN);
         intent.putExtra(DevicePolicyManager.EXTRA_ADD_EXPLANATION, getString(R.string.receiver_expl));
-        Log.i(TAG, "startActivityForResult: requestCode=" + REQUEST_CODE_ENABLE_ADMIN);
+        i("startActivityForResult: requestCode=%d", REQUEST_CODE_ENABLE_ADMIN);
         startActivityForResult(intent, REQUEST_CODE_ENABLE_ADMIN);
     }
 
@@ -67,7 +66,11 @@ public class MainActivity extends Activity {
         }
     }
 
-    private void flash(final String s) {
-        Toast.makeText(this, s, Toast.LENGTH_LONG).show();
+    private static void i(final String s) {
+        Log.i(TAG, s);
+    }
+
+    private static void i(final String fmt, final Object... args) {
+        Log.i(TAG, String.format(fmt, args));
     }
 }
