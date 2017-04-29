@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -11,6 +12,8 @@ public class MainActivity extends Activity {
 
     private static final String TAG = "MainActivity";
     private static final int REQUEST_CODE_ENABLE_ADMIN = 1;
+    private static final String EMUI_LOCK_PKG = "com.android.systemui";
+    private static final String EMUI_LOCK_CLS = "com.huawei.keyguard.onekeylock.OneKeyLockActivity";
 
     private ComponentName mCN;
     private DevicePolicyManager mDPM;
@@ -23,7 +26,10 @@ public class MainActivity extends Activity {
         mCN = new ComponentName(this, MainReceiver.class); // Receiver, not Activity!
         mDPM = (DevicePolicyManager)getSystemService(DEVICE_POLICY_SERVICE);
 
-        if (isAdminActive()) {
+        if (isHuaweiNougat()) {
+            launchEmuiLockActivity();
+            finish();
+        } else if (isAdminActive()) {
             lock();
             finish();
         } else {
@@ -38,6 +44,11 @@ public class MainActivity extends Activity {
             lock();
         }
         finish();
+    }
+
+    private static boolean isHuaweiNougat() {
+        return Build.MANUFACTURER.equalsIgnoreCase("huawei")
+                && Build.VERSION.SDK_INT >= Build.VERSION_CODES.N;
     }
 
     private boolean isAdminActive() {
@@ -64,6 +75,12 @@ public class MainActivity extends Activity {
             case RESULT_OK: return "RESULT_OK";
             default: return "UNKNOWN";
         }
+    }
+
+    private void launchEmuiLockActivity() {
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName(EMUI_LOCK_PKG, EMUI_LOCK_CLS));
+        startActivity(intent);
     }
 
     private static void i(final String s) {
