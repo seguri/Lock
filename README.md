@@ -15,7 +15,7 @@ administrator permission and then it will lock the screen. On next launches, it
 will immediately lock the screen.
 
 **NEW in 1.1.0**: I recently updated to Nougat on my Huawei P9 Lite and it broke my app (screen lock by an administrator requires to enter full password or pin).
-Thanks to a XDA user, I updated my app to circumvent this.
+Thanks to a [XDA user][3], I updated my app to circumvent this.
 Now, on Huawei with Nougat and EMUI 5, it doesn't even require to be an administrator.
 
 ## Uninstalling
@@ -25,3 +25,4 @@ Now, on Huawei with Nougat and EMUI 5, it doesn't even require to be an administ
 
 [1]: https://github.com/ligi/FAST
 [2]: https://stackoverflow.com/questions/5387582/how-to-remove-an-app-with-active-device-admin-enabled-on-android
+[3]: https://forum.xda-developers.com/showpost.php?p=70712987&postcount=5
