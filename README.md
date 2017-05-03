@@ -18,6 +18,12 @@ will immediately lock the screen.
 Thanks to a [XDA user][3], I updated my app to circumvent this.
 Now, on Huawei with Nougat and EMUI 5, it doesn't even require to be an administrator.
 
+## Download
+
+[<img src="https://f-droid.org/badge/get-it-on.png"
+      alt="Get it on F-Droid"
+      height="80">](https://f-droid.org/app/name.seguri.android.lock)
+
 ## Uninstalling
 
 [How to remove an app with active device admin enabled on Android?][2]
