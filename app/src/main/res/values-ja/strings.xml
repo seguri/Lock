@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="receiver_name">Lock - 画面ロック</string>
+    <!-- Message displayed to the user by system during authorization-->
+    <string name="receiver_expl">"ロック" して画面をオフできるようにしますか?</string>
+    <!-- Small description inside Device Administrator Setting -->
+    <string name="receiver_desc">画面のロックを許可します</string>
+</resources>
