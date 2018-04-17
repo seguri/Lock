@@ -39,7 +39,7 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        i("onActivityResult: requestCode=%d resultCode=%d resultCodeString=", requestCode, resultCode, getResultString(resultCode));
+        i("onActivityResult: requestCode=%d resultCode=%d resultCodeString=%s", requestCode, resultCode, getResultString(resultCode));
         if (requestCode == REQUEST_CODE_ENABLE_ADMIN && resultCode == RESULT_OK) {
             lock();
         }
