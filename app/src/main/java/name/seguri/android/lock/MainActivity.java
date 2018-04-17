@@ -48,7 +48,7 @@ public class MainActivity extends Activity {
 
     private static boolean isHuaweiNougat() {
         return Build.MANUFACTURER.equalsIgnoreCase("huawei")
-                && Build.VERSION.SDK_INT >= Build.VERSION_CODES.N;
+                && Build.VERSION.SDK_INT == Build.VERSION_CODES.N;
     }
 
     private boolean isAdminActive() {
