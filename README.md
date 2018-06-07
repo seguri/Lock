@@ -14,15 +14,22 @@ Its behavior is very simple: on first run it will ask the required device
 administrator permission and then it will lock the screen. On next launches, it
 will immediately lock the screen.
 
-**NEW in 1.1.0**: I recently updated to Nougat on my Huawei P9 Lite and it broke my app (screen lock by an administrator requires to enter full password or pin).
-Thanks to a [XDA user][3], I updated my app to circumvent this.
-Now, on Huawei with Nougat and EMUI 5, it doesn't even require to be an administrator.
-
 ## Download
 
 [<img src="https://f-droid.org/badge/get-it-on.png"
       alt="Get it on F-Droid"
       height="80">](https://f-droid.org/app/name.seguri.android.lock)
+
+## Changelog
+
+### 1.3.0
+
+It is now possible to set Lock as an Assistant app (`Settings > Apps > Advanced > Default apps > Assist & voice input`). A long-press on home button will now lock the device wherever you are.
+
+### 1.1.0
+I recently updated to Nougat on my Huawei P9 Lite and it broke my app (screen lock by an administrator requires to enter full password or pin).
+Thanks to a [XDA user][3], I updated my app to circumvent this.
+Now, on Huawei with Nougat and EMUI 5, it doesn't even require to be an administrator.
 
 ## Uninstalling
 
