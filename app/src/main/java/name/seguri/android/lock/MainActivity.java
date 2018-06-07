@@ -61,10 +61,10 @@ public class MainActivity extends Activity {
     }
 
     private void enableAppAsAdministrator() {
+        i("[enableAppAsAdministrator] startActivityForResult: requestCode=%d", REQUEST_CODE_ENABLE_ADMIN);
         Intent intent = new Intent(DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN);
         intent.putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN, mCN);
         intent.putExtra(DevicePolicyManager.EXTRA_ADD_EXPLANATION, getString(R.string.receiver_expl));
-        i("[enableAppAsAdministrator] startActivityForResult: requestCode=%d", REQUEST_CODE_ENABLE_ADMIN);
         startActivityForResult(intent, REQUEST_CODE_ENABLE_ADMIN);
     }
 
@@ -78,6 +78,7 @@ public class MainActivity extends Activity {
     }
 
     private void launchEmuiLockActivity() {
+        i("[launchEmuiLockActivity] startActivity");
         Intent intent = new Intent();
         intent.setComponent(new ComponentName(EMUI_LOCK_PKG, EMUI_LOCK_CLS));
         startActivity(intent);
