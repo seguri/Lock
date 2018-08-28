@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lock</string>
+    <string name="receiver_name">Lock - Displaysperre</string>
+    <string name="receiver_expl">Lock erlauben das Display abzuschalten?</string>
+    <string name="receiver_desc">Erlaubt Lock das Display zu sperren</string>
+</resources>
