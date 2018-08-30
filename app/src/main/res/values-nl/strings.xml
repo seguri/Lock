@@ -1,5 +1,4 @@
 ﻿<resources>
-    <string name="app_name" translatable="false">Lock</string>
     <string name="receiver_name">Lock - schermvergrendeling</string>
     <!-- Message displayed to the user by system during authorization-->
     <string name="receiver_expl">"Lock" machtigen om het scherm uit te schakelen?</string>
