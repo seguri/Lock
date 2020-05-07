@@ -7,4 +7,5 @@
     <string name="receiver_desc">Allows to lock the screen</string>
     <!-- Ask user to enable app as Accessibility Service-->
     <string name="enable_accessibility_service">Please enable Lock as an accessibility service in the following screen</string>
+    <string name="accessibility_service_desc">Lock the screen</string>
 </resources>
