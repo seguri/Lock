@@ -84,11 +84,7 @@ public class MainActivity extends Activity {
         startActivity(intent);
     }
 
-    private static void i(final String s) {
-        Log.i(TAG, s);
-    }
-
     private static void i(final String fmt, final Object... args) {
-        i(String.format(fmt, args));
+        Log.i(TAG, String.format(fmt, args));
     }
 }
