@@ -2,6 +2,8 @@
 
 A very simple and minimal app to lock the screen. It tries whenever possible to keep fingerprint unlock available.
 
+You can now set any tap, double tap or long home press actions to immediately lock the screen, if your launcher allows you to configure custom gestures.
+
 ## Description
 
 Its behavior is very simple: on first run it will require the necessary permission according to the Android version you're running:
