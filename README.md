@@ -1,26 +1,37 @@
 # Lock
 
-## Introduction
+A very simple and minimal app to lock the screen. It tries whenever possible to keep fingerprint unlock available.
 
-Very simple app to lock the screen.
+## Description
 
-I use it with [FAST][1] launcher to quickly
-lock the screen (either clicking the icon or typing "lk") because I miss my previous launcher feature "lock with double
-click on home button".
-I tried a series of apps that were not comfortable with FAST launcher because
-they required too much steps to lock the screen.
+Its behavior is very simple: on first run it will require the necessary permission according to the Android version you're running:
 
-Its behavior is very simple: on first run it will ask the required device
-administrator permission and then it will lock the screen. On next launches, it
-will immediately lock the screen.
+- On Android 9+ devices, it will ask to be enabled as an accessibility service;
+- On Huawei devices running Android Nougat, it will immediately lock the screen, no permission required;
+- On other devices, the app will ask to be enabled as a Device Admin; fingerprint unlock will not be available.
+
+After the necessary permission has been enabled, the app will immediately lock the screen the next time you open it.
+
+## Accessibility Service configuration
+
+Here are some screenshots that explain how to configure this app as an Accessibility Service on Android 9+ devices:
+
+- [Huawei P20 Lite](docs/ane-lx1.jpg)
+- [Xiaomi Mi 9T](docs/davinci_eea.jpg)
 
 ## Download
+
+This app is available on F-Droid:
 
 [<img src="https://f-droid.org/badge/get-it-on.png"
       alt="Get it on F-Droid"
       height="80">](https://f-droid.org/app/name.seguri.android.lock)
 
 ## Changelog
+
+### 1.4.0
+
+It is now possible to use Accessibility Services on Android 9+ devices, so that you can continue using fingerprint unlock.
 
 ### 1.3.0
 
