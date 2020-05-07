@@ -39,7 +39,7 @@
             android:permission="android.permission.BIND_DEVICE_ADMIN">
             <meta-data
                 android:name="android.app.device_admin"
-                android:resource="@xml/force_lock_policy"/>
+                android:resource="@xml/force_lock_policy" />
             <intent-filter>
                 <!--
                     This is the primary action that a DeviceAdminReceiver subclass must handle to be
@@ -51,6 +51,15 @@
                 <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
             </intent-filter>
         </receiver>
+        <service
+            android:name=".LockAccessibilityService"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/lock_accessibility_service_config" />
+        </service>
     </application>
-
 </manifest>
