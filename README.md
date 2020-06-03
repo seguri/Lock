@@ -40,9 +40,14 @@ It is now possible to use Accessibility Services on Android 9+ devices, so that 
 It is now possible to set Lock as an Assistant app (`Settings > Apps > Advanced > Default apps > Assist & voice input`). A long-press on home button will now lock the device wherever you are.
 
 ### 1.1.0
+
 I recently updated to Nougat on my Huawei P9 Lite and it broke my app (screen lock by an administrator requires to enter full password or pin).
 Thanks to a [XDA user][3], I updated my app to circumvent this.
 Now, on Huawei with Nougat and EMUI 5, it doesn't even require to be an administrator.
+
+## About `gradle-wrapper.jar`
+
+This file is a binary blob of executable code that contains [`GradleWrapperMain`](https://github.com/gradle/gradle/blob/master/subprojects/wrapper/src/main/java/org/gradle/wrapper/GradleWrapperMain.java), the Java class invoked by `gradlew` and responsible for the correct setup of the Gradle wrapper in this project. A [Github action](.github/workflows/gradle-wrapper-validation.yml) has been added as explained [here](https://github.com/marketplace/actions/gradle-wrapper-validation#the-gradle-wrapper-problem-in-open-source) to avoid the injection of malicious code in this file. Please check also [this page](https://docs.gradle.org/current/userguide/gradle_wrapper.html#wrapper_checksum_verification) if you want to manually verify its integrity.
 
 ## Uninstalling
 
