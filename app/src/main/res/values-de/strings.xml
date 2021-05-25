@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="receiver_name">Lock - Displaysperre</string>
-    <string name="receiver_expl">Lock erlauben das Display abzuschalten?</string>
-    <string name="receiver_desc">Erlaubt Lock das Display zu sperren</string>
+    <string name="receiver_expl">Lock erlauben, das Display abzuschalten?</string>
+    <string name="receiver_desc">Erlaubt Lock, das Display zu sperren</string>
+    <string name="enable_accessibility_service">Bitte vergeben Sie für Lock auf dem folgenden Bildschirm die Berechtigung Bedienungshilfe.</string>
+    <string name="accessibility_service_desc">Bildschirm sperren</string>
 </resources>
